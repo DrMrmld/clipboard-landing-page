@@ -4,8 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="stylesheet" href="styles.css">
-
-  <!-- <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png"> -->
   
   <title>Frontend Mentor | Clipboard landing page</title>
 
@@ -14,11 +12,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
@@ -47,10 +40,12 @@
     </p>
 
     <div class="features-content">
+      <!-- Image is inside of the div because I will need to 'remove' the image and replace it with just background-image -->
       <div class="features-image">
         <img src="images/image-computer.png" alt="Computer image">
       </div>
 
+      <!-- Block with the list of features -->
       <div class="features-block">
         <div class="features-item">
           <h3>Quick Search</h3>
@@ -78,9 +73,8 @@
       snippets in a few simple clicks.
     </p>
 
-    <div class="features-image">
-      <img src="images/image-devices.png" alt="Devices image">
-    </div>
+    <!-- This image is not within another div because its positioning is the same for all device widths -->
+    <img src="images/image-devices.png" alt="Devices image">
   </section>
 
   <!-- Features 3 section -->
@@ -90,6 +84,7 @@
       We’ve got the tools to boost your productivity.
     </p>
 
+    <!-- Block with the list of the features -->
     <div class="features-block">
       <div class="features-item">
         <img src="images/icon-blacklist.svg" alt="Blacklist icon">
@@ -114,6 +109,7 @@
   <!-- Companies section -->
   <section class="companies wrapper">
     <div class="companies-list">
+      <!-- Icons will be backgrounds so they are easier to manipulate -->
       <div title="Google"></div>
       <div title="IBM"></div>
       <div title="Microsoft"></div>
@@ -128,6 +124,7 @@
     <p>Available for free on the App Store. Download for Mac or iOS, sync with iCloud 
       and you’re ready to start adding to your clipboard.</p>
 
+    <!-- Same buttons as in the header -->
     <div class="download-buttons">
       <a href="#" class="ios-download">Download for iOS</a>
       <a href="#" class="mac-download">Download for Mac</a>
@@ -147,6 +144,7 @@
     </nav>
 
     <div class="social">
+      <!-- Icons will be div backgrounds -->
       <div class="icon icon-facebook"><a href="https://www.facebook.com/"></a></div>
       <div class="icon icon-twitter"><a href="https://www.twitter.com/"></a></div>
       <div class="icon icon-instagram"><a href="https://www.instagram.com/"></a></div>
@@ -156,7 +154,7 @@
   <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/DrMrmld">DrMrmld</a>.
     </p>
   </footer> -->
 </body>

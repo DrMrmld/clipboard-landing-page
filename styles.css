@@ -17,6 +17,7 @@
 }
 
 * {
+    /* Only one font-family was used in the design */
     font-family: 'Bai Jamjuree', sans-serif;
 }
 
@@ -24,13 +25,13 @@ body {
     margin: 0;
 }
 
-/* Helper classes */
+/* HELPER CLASSES */
 .wrapper {
     padding: 0 25px 0;
 }
 
 
-/* Global styles */
+/* GLOBAL STYLES */
 p {
     margin: 0 auto;
     padding: 0;
@@ -59,7 +60,7 @@ h3 {
 }
 
 
-/* Header styles */
+/* HEADER STYLES */
 header {
     text-align: center;
     background-image: url('images/bg-header-mobile.png');
@@ -72,6 +73,7 @@ header img {
     margin-top: 125px;
 }
 
+/* Buttons are stacked on mobile but lined up on desktop (and wide tablets) */
 .download-buttons {
     display: flex;
     margin-top: 50px;
@@ -114,7 +116,7 @@ a.mac-download {
     }
 
 
-/* Features section styles */
+/* FEATURES SECTIONS STYLES */
 .features {
     text-align: center;
 }
@@ -168,11 +170,12 @@ a.mac-download {
 }
 
 
-/* Companies section styles */
+/* COMPANIES SECTION STYLES */
 section.companies {
     margin-top: 125px;
 }
 
+/* The list is stacked on mobile but lined up on desktop (and wide tablets) */
 .companies-list {
     display: flex;
     flex-wrap: wrap;
@@ -182,47 +185,39 @@ section.companies {
 .companies-list div {
     flex-basis: 100%;
     height: 120px;
-}
-
-.companies-list div[title="Google"] {
-    background-image: url('images/logo-google.png');
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.companies-list div[title="IBM"] {
-    background-image: url('images/logo-ibm.png');
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    .companies-list div[title="Google"] {
+        background-image: url('images/logo-google.png');
+    }
 
-.companies-list div[title="Microsoft"] {
-    background-image: url('images/logo-microsoft.png');
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    .companies-list div[title="IBM"] {
+        background-image: url('images/logo-ibm.png');
+    }
 
-.companies-list div[title="Hewlett Packard"] {
-    background-image: url('images/logo-hp.png');
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    .companies-list div[title="Microsoft"] {
+        background-image: url('images/logo-microsoft.png');
+    }
 
-.companies-list div[title="Vector Graphics"] {
-    background-image: url('images/logo-vector-graphics.png');
-    background-repeat: no-repeat;
-    background-position: center;
-}
+    .companies-list div[title="Hewlett Packard"] {
+        background-image: url('images/logo-hp.png');
+    }
+
+    .companies-list div[title="Vector Graphics"] {
+        background-image: url('images/logo-vector-graphics.png');
+    }
 
 
-/* Download section styles */
+/* DOWNLOAD SECTION STYLES */
 .download-section {
     margin-top: 140px;
     text-align: center;
 }
 
 
-/* Footer styles */
+/* FOOTER STYLES */
 footer {
     display: flex;
     flex-direction: column;
@@ -234,6 +229,7 @@ footer {
     text-align: center;
 }
 
+/* This margin should be applied only for first gen children */
 footer > div {
     margin: 18px 0;
 }
@@ -266,7 +262,7 @@ footer nav div a {
 
 /* Social media styles */
 footer .social {
-    display: flex;
+    display: flex; /* icons should be lined up */
     margin-bottom: 0;
     padding: 15px 0;
     justify-content: center;
@@ -287,6 +283,7 @@ footer .social .icon a {
     height: 25px;
 }
 
+/* When icons are hovered, backgrounds change to green icons. */
 .icon-facebook {
     background: url('images/icon-facebook.svg');
 }
@@ -312,7 +309,7 @@ footer .social .icon a {
     }
 
 
-/* Media queries */
+/* MEDIA QUERIES */
 @media screen and (min-width: 460px) {
 
     /* Changing header background because it gets too small */
@@ -328,7 +325,7 @@ footer .social .icon a {
         padding: 0 50px 0;
     }
 
-    /* Buttons start to line up */
+    /* Preventing lining up of the buttons */
     .download-buttons a {
         flex-basis: 180px;
     }
@@ -336,12 +333,13 @@ footer .social .icon a {
 
 @media screen and (min-width: 780px) {
 
-    /* Lining up buttons. Not using 'justify-content: space-around' because I need it to be centered for desktop widths also */
+    /* Lining up buttons. Not using 'justify-content: space-around' because I need them to be centered for desktop widths also */
     .download-buttons a {
         flex-basis: 160px;
         margin: 0 10px;
     }
 
+    /* Lining up navigation section of the footer */
     footer nav {
         flex-wrap: wrap;
         height: 110px;
@@ -365,7 +363,7 @@ footer .social .icon a {
     }
 
 
-    /* Companies styles */
+    /* Lining up companies' icons */
     .companies-list {
         max-width: 1110px;
         margin-left: auto;
@@ -379,7 +377,7 @@ footer .social .icon a {
     }
 
     
-    /* Footer styles */
+    /* Lining up everything in footer */
     footer {
         flex-wrap: wrap;
         height: 150px;
@@ -391,17 +389,16 @@ footer .social .icon a {
         margin: 0;
     }
 
-    /* Navigation styles */
     footer nav div {
-        padding: 0 0 15px 0;
+        padding: 0 0 15px;
     }
 }
 
 
-/* Main media quiery for desktop styles */
+/* MAIN MEDIA QUERY FOR DESKTOP STYLES */
 @media screen and (min-width: 1056px) {
 
-    /* Global styles for desktop */
+    /* GLOBAL STYLES */
     h1 {
         font-size: 44px;
     }
@@ -416,7 +413,7 @@ footer .social .icon a {
     }
 
 
-    /* Header styles */
+    /* HEADER STYLES */
     header p {
         font-size: 20px;
     }
@@ -429,7 +426,7 @@ footer .social .icon a {
     }
 
 
-    /* Features general */
+    /* FEATURES SECTIONS STYLES */
     .features-item {
         max-width: 100%;
     }
@@ -442,7 +439,7 @@ footer .social .icon a {
         margin-top: 80px;
     }
 
-    /* Features 1 section */
+    /* Features 1 */
     .features-1 {
         margin-top: 155px;
         padding: 0;
@@ -458,10 +455,12 @@ footer .social .icon a {
         flex: 1 0 0;
     }
 
+    /* Hiding image tag so I can use the div to put background */
     .features-1 img {
         visibility: hidden;
     }
 
+    /* Now background can be aligned to right as in the design */
     .features-1 .features-image {
         background-image: url('images/image-computer.png');
         background-repeat: no-repeat;
@@ -477,7 +476,7 @@ footer .social .icon a {
         padding-left: 100px;
     }
 
-    /* This code somehow adds padding to all paragraphs in the html. Still did not figure it out */
+    /* This code somehow adds padding to all paragraphs in the html. Still did not figure out why. */
     /* .features-1 .features-content .features-item h3, p {
         padding-left: 100px;
     } */
@@ -504,13 +503,13 @@ footer .social .icon a {
     }
 
 
-    /* Companies styles */
+    /* COMPANIES SECTION STYLES */
     .companies-list div {
         background-size: unset;
     }
 
 
-    /* Download section styles */
+    /* DOWNLOAD SECTION STYLES */
     .download-section h3 {
         font-size: 36px;
     }
