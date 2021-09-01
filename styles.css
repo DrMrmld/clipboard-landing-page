@@ -13,7 +13,6 @@
     /* Colors - hover states */
     --lighterStrongCyan: #5dccbb;
     --lighterLightBlue: #8896ff;
-    --lightGreen: #439b85;
 }
 
 * {
@@ -221,8 +220,8 @@ section.companies {
 footer {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    padding: 50px 0;
+    margin-top: 145px;
+    padding: 35px 0;
     box-sizing: border-box;
     background-color: var(--veryLightGray);
     color: var(--darkGrayishBlue);
@@ -257,7 +256,7 @@ footer nav div a {
 }
 
     footer nav div a:hover {
-        color: var(--lightGreen);
+        color: var(--strongCyan);
     }
 
 /* Social media styles */
@@ -270,7 +269,8 @@ footer .social {
 
 footer .social .icon {
     height: 25px;
-    flex: 0 0 70px;
+    margin: 0 22px;
+    flex: 0 0 25px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -339,6 +339,11 @@ footer .social .icon a {
         margin: 0 10px;
     }
 
+    /* Adding margin to footer because download buttons now don't contribute to overall margin */
+    footer {
+        margin-top: 170px;
+    }
+
     /* Lining up navigation section of the footer */
     footer nav {
         flex-wrap: wrap;
@@ -380,6 +385,7 @@ footer .social .icon a {
     /* Lining up everything in footer */
     footer {
         flex-wrap: wrap;
+        margin-top: 150px;
         height: 150px;
         padding-top: 40px;
         text-align: left;
@@ -391,6 +397,10 @@ footer .social .icon a {
 
     footer nav div {
         padding: 0 0 15px;
+    }
+
+    footer .social .icon {
+        margin: 0 11px;
     }
 }
 
